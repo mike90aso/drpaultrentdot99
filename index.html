@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DOT Physical — Dr. Paul Trentalage | San Diego, CA | $99 Exam & Card</title>
+  <meta name="description" content="Same-day DOT physical with Dr. Paul Trentalage in San Diego, CA. $99 exam and card. Driver friendly, in and out in 30 minutes. Schedule your appointment online today." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700;1,9..40,400&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      /* Dark charcoal + orange/gold */
+      --dark: #1B242C;
+      --dark-header: #151c22;
+      --white: #ffffff;
+      --gray-light: #E0E0E0;
+      --gray-mid: #CCCCCC;
+      --off-white: #f4f6f8;
+      --gray-100: #e2e6ea;
+      --gray-500: #6b7280;
+      --accent: #FF9B00;
+      --accent-hover: #e68a00;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'DM Sans', system-ui, sans-serif;
+      font-size: 1.0625rem;
+      line-height: 1.6;
+      color: var(--gray-light);
+      background: var(--dark);
+    }
+
+    .site-header {
+      background: var(--dark-header);
+      color: var(--white);
+      padding: 1rem 1rem;
+      text-align: center;
+    }
+    .site-header h1 {
+      margin: 0;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: clamp(1.25rem, 4vw, 1.5rem);
+      letter-spacing: 0.02em;
+    }
+    .site-header .sub {
+      margin-top: 0.25rem;
+      font-size: 0.9rem;
+      color: var(--gray-light);
+    }
+
+    .hero {
+      background: var(--dark);
+      color: var(--white);
+      padding: 2.5rem 1rem 3rem;
+      text-align: center;
+    }
+    .hero .price {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: clamp(2rem, 8vw, 3rem);
+      margin: 0 0 0.5rem;
+      letter-spacing: -0.02em;
+    }
+    .hero .price span { color: var(--accent); }
+    .hero .tagline {
+      font-size: 1.15rem;
+      margin: 0 0 1.5rem;
+      color: var(--gray-light);
+    }
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+      align-items: center;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.85rem 1.5rem;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 1rem;
+      text-decoration: none;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .btn-primary {
+      background: var(--accent);
+      color: var(--dark);
+    }
+    .btn-primary:hover { background: var(--accent-hover); transform: translateY(-1px); }
+    .btn-secondary {
+      background: transparent;
+      color: var(--white);
+      border: 2px solid var(--accent);
+    }
+    .btn-secondary:hover { background: rgba(255,155,0,0.15); }
+
+    .badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+    .badge {
+      background: transparent;
+      padding: 0.5rem 1rem;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      border: 2px solid var(--accent);
+      color: var(--white);
+    }
+
+    section {
+      padding: 2rem 1rem;
+      background: var(--dark);
+    }
+    section h2 {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 1.35rem;
+      color: var(--accent);
+      margin: 0 0 1rem;
+    }
+    .card {
+      background: rgba(27, 36, 44, 0.6);
+      border: 1px solid rgba(255, 155, 0, 0.3);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    .card:last-child { margin-bottom: 0; }
+    .card p { color: var(--gray-light); margin: 0; }
+
+    .hours-grid {
+      display: grid;
+      gap: 0.5rem;
+    }
+    .hours-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.4rem 0;
+      border-bottom: 1px solid rgba(255, 155, 0, 0.2);
+    }
+    .hours-row:last-child { border-bottom: none; }
+    .hours-row .day { font-weight: 600; color: var(--white); }
+    .hours-row .time { color: var(--gray-light); }
+
+    .address-block {
+      font-size: 1rem;
+      color: var(--gray-light);
+    }
+    .address-block strong { color: var(--white); }
+    .address-block a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .address-block a:hover { text-decoration: underline; }
+
+    .acuity-embed-wrap {
+      margin: 2rem 0;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 155, 0, 0.3);
+    }
+    .acuity-embed-wrap iframe {
+      display: block;
+      min-height: 800px;
+    }
+
+    .footer {
+      background: var(--dark);
+      color: var(--gray-light);
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.9rem;
+    }
+    .footer a { color: var(--accent); }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <h1>Dr. Paul Trentalage</h1>
+    <p class="sub">San Diego DOT Physicals — San Diego, California</p>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="price">$99 <span>Exam & Card</span></p>
+      <p class="tagline">Same-day DOT physical. Driver friendly. In and out in 30 minutes or less.</p>
+      <div class="cta-row">
+        <a href="https://app.acuityscheduling.com/schedule.php?owner=24644698&calendarID=6918838" target="_blank" rel="noopener" class="btn btn-primary">Schedule now</a>
+        <a href="tel:+16199225064" class="btn btn-secondary">Call (619) 922-5064</a>
+      </div>
+      <div class="badges">
+        <span class="badge">Monday–Friday</span>
+        <span class="badge">Done in 30 mins or less</span>
+        <span class="badge">Same-day DOT physical</span>
+        <span class="badge">Driver friendly</span>
+      </div>
+    </section>
+
+    <section>
+      <h2>Location & Hours</h2>
+      <div class="card">
+        <div class="address-block">
+          <strong>2615 Camino del Rio S # 100</strong><br />
+          San Diego, CA 92108
+        </div>
+        <p class="phone-block" style="margin-top: 0.75rem; font-size: 1.25rem; font-weight: 700;">
+          <a href="tel:+16199225064" style="color: var(--accent); text-decoration: none;">(619) 922-5064</a> — Call or text to schedule
+        </p>
+      </div>
+
+      <h2 id="schedule" style="margin-top: 2rem;">Schedule your appointment</h2>
+      <div class="acuity-embed-wrap">
+        <iframe src="https://app.acuityscheduling.com/schedule.php?owner=24644698&calendarID=6918838&ref=embedded_csp" title="Schedule Appointment" width="100%" height="800" frameBorder="0" allow="payment"></iframe>
+      </div>
+      <script src="https://embed.acuityscheduling.com/js/embed.js" type="text/javascript"></script>
+
+      <div class="card">
+        <h2 style="margin-top:0;">Hours</h2>
+        <div class="hours-grid">
+          <div class="hours-row"><span class="day">Monday</span><span class="time">9:00am – 6:30pm</span></div>
+          <div class="hours-row"><span class="day">Tuesday</span><span class="time">9:00am – 6:30pm</span></div>
+          <div class="hours-row"><span class="day">Wednesday</span><span class="time">9:00am – 6:30pm</span></div>
+          <div class="hours-row"><span class="day">Thursday</span><span class="time">9:00am – 6:30pm</span></div>
+          <div class="hours-row"><span class="day">Friday</span><span class="time">9:00am – 6:30pm</span></div>
+          <div class="hours-row"><span class="day">Saturday & Sunday</span><span class="time">Closed</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Why choose us</h2>
+      <div class="card">
+        <p><strong>Driver friendly.</strong> We know your time matters. Get your DOT physical without the runaround.</p>
+      </div>
+      <div class="card">
+        <p><strong>In and out in 30 minutes or less.</strong> Fast, efficient exams so you can get back on the road.</p>
+      </div>
+      <div class="card">
+        <p><strong>Monday through Friday.</strong> Convenient weekday hours.</p>
+      </div>
+      <div class="card">
+        <p><strong>Same-day DOT physical.</strong> Exam and card in one visit — no extra trips.</p>
+      </div>
+      <p style="text-align: center; margin-top: 1.5rem;">
+        <a href="tel:+16199225064" class="btn btn-primary">Call (619) 922-5064 to schedule</a>
+      </p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Dr. Paul Trentalage — San Diego DOT Physicals</p>
+    <p>2615 Camino del Rio S # 100, San Diego, CA 92108 • <a href="tel:+16199225064">(619) 922-5064</a></p>
+  </footer>
+</body>
+</html>
