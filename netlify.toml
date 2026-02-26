@@ -5,6 +5,19 @@
   publish = "."
   command = "# no build step"
 
+# Rewrite /dot-physical so Google Ads can use this as Final URL (often fixes Android "Destination not working")
+[[redirects]]
+  from = "/dot-physical"
+  to = "/index.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/dot-physical/"
+  to = "/index.html"
+  status = 200
+  force = true
+
 # Force HTTPS and avoid redirect loops; keep responses standard
 [[redirects]]
   from = "http://sandiegodot.com/*"
