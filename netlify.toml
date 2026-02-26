@@ -1,0 +1,33 @@
+# Netlify config for sandiegodot.com
+# Ensures clean responses for Google Ads destination checks (including Android)
+
+[build]
+  publish = "."
+  command = "# no build step"
+
+# Force HTTPS and avoid redirect loops; keep responses standard
+[[redirects]]
+  from = "http://sandiegodot.com/*"
+  to = "https://sandiegodot.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://www.sandiegodot.com/*"
+  to = "https://sandiegodot.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.sandiegodot.com/*"
+  to = "https://sandiegodot.com/:splat"
+  status = 301
+  force = true
+
+# Headers: ensure crawlers get a normal 200 response (no blocking)
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
